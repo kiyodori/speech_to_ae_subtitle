@@ -1,5 +1,9 @@
 import subprocess
+import fire
 
-command = "ffmpeg -i C:/test.mp4 -ab 160k -ac 2 -ar 44100 -vn audio.wav"
+def convert(input, output):
+  command = f'ffmpeg -i {input} -ab 160k -ac 2 -ar 44100 -vn {output}'
+  subprocess.call(command, shell=True)
 
-subprocess.call(command, shell=True)
+if __name__ == '__main__':
+  fire.Fire(convert)
