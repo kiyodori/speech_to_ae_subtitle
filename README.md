@@ -1,4 +1,4 @@
-# speech_to_subtitle
+# speech_to_ae_subtitle
 
 Script for converting speech to subtitle.
 
