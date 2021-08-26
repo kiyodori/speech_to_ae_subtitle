@@ -8,12 +8,21 @@ Script for converting speech to subtitle.
 
 ## Setting
 
+Create and launch a Docker container.
+
 ```bash
 # Create and launch a Docker container
 $ docker-compose up -d --build
 
 # Run the container bash
 $ docker-compose exec python3 bash
+```
+
+Set aws config files.
+
+```bash
+$ cp .aws/credentials.dev .aws/credentials
+$ cp .aws/config.dev .aws/config
 ```
 
 ## Usage
