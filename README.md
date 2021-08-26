@@ -4,7 +4,7 @@ Script for converting speech to subtitle.
 
 ## Requirements
 
-* Premiere Pro
+* Adobe After Effects
 
 ## Setting
 
@@ -25,3 +25,13 @@ First, place the mp4 files you want to convert in the input directory. Then, con
 ```bash
 $ python convert.py input/test.mp4 audio/test.wav
 ```
+
+### 2. Upload wav to Amazon S3
+
+### 3. Create AE script
+
+### 4. Modify texts of AE script
+
+### 5. Execute AE script
+
+### 6. Export to mov
