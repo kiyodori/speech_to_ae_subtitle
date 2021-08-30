@@ -1,12 +1,14 @@
-# speech_to_subtitle
+# speech_to_ae_subtitle
 
 Script for converting speech to subtitle.
 
 ## Requirements
 
-* Premiere Pro
+* Adobe After Effects
 
 ## Setting
+
+Create and launch a Docker container.
 
 ```bash
 # Create and launch a Docker container
@@ -16,12 +18,35 @@ $ docker-compose up -d --build
 $ docker-compose exec python3 bash
 ```
 
+Set aws config files.
+
+```bash
+$ cp .aws/credentials.dev .aws/credentials
+$ cp .aws/config.dev .aws/config
+```
+
 ## Usage
 
 ### 1. Convert mp4 to wav
 
-First, place the mp4 files you want to convert in the input directory. Then, convert it to a wav file by specifying the file name under the audio directory.
+Place the mp4 files you want to convert in the input directory. The following command will output a wav file under the audio directory.
 
 ```bash
-$ python convert.py input/test.mp4 audio/test.wav
+$ python converter.py test.mp4 test.wav
 ```
+
+### 2. Upload wav to Amazon S3
+
+Upload the wav file to the Amazon S3 bucket.
+
+```bash
+$ python uploader.py test.wav my-bucket
+```
+
+### 3. Create AE script
+
+### 4. Modify texts of AE script
+
+### 5. Execute AE script
+
+### 6. Export to mov
