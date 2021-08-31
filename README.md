@@ -18,7 +18,7 @@ $ docker-compose up -d --build
 $ docker-compose exec python3 bash
 ```
 
-Set aws config files.
+Create an AWS IAM and set aws config files.
 
 ```bash
 $ cp .aws/credentials.dev .aws/credentials
@@ -37,7 +37,7 @@ $ python converter.py test.mp4 test.wav
 
 ### 2. Upload wav to Amazon S3
 
-Upload the wav file to the Amazon S3 bucket.
+Create S3 bucket. Then upload the wav file to the Amazon S3 bucket.
 
 ```bash
 $ python uploader.py test.wav my-bucket
