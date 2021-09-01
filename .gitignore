@@ -1,6 +1,5 @@
 .DS_Store
 
-src/.aws/credentials
 src/.aws/config
 src/.env
 
