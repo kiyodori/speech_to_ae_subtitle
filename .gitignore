@@ -2,3 +2,6 @@
 
 src/.aws/credentials
 src/.aws/config
+src/.env
+
+src/__pycache__/
