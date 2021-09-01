@@ -18,11 +18,11 @@ $ docker-compose up -d --build
 $ docker-compose exec python3 bash
 ```
 
-Create an AWS IAM and set aws config files.
+Create an AWS IAM user and two S3 buckets for file input and file output. Then, Set config and env files.
 
 ```bash
-$ cp .aws/credentials.dev .aws/credentials
 $ cp .aws/config.dev .aws/config
+$ cp .env.dev .env
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ $ python converter.py test.mp4 test.wav
 Create S3 bucket. Then upload the wav file to the Amazon S3 bucket.
 
 ```bash
-$ python uploader.py test.wav my-bucket
+$ python uploader.py test.wav
 ```
 
 ### 3. Create AE script
