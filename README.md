@@ -25,6 +25,14 @@ $ cp .aws/config.dev .aws/config
 $ cp .env.dev .env
 ```
 
+Create AWS lambda function for transcribing when wav file has uploaded to S3 input bucket.
+
+* Set transcribe_function/lambda_function.py to AWS lambda function
+* Specify an S3 input bucket for the lambda trigger
+* Set the following two lambda environment variables
+  * OUTPUT_BUCKET: AWS S3 output bucket
+  * REGION: AWS S3 region
+
 ## Usage
 
 ### 1. Convert mp4 to wav
