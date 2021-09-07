@@ -32,6 +32,10 @@ Create AWS lambda function for transcribing when wav file has uploaded to S3 inp
 * Set the following two lambda environment variables
   * OUTPUT_BUCKET: AWS S3 output bucket
   * REGION: AWS S3 region
+* Attach the following policy to lambda function
+  * AmazonS3FullAccess
+  * AmazonTranscribeFullAccess
+  * CloudWatchLogsFullAccess
 
 ## Usage
 
