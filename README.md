@@ -15,7 +15,7 @@ Create and launch a Docker container.
 $ docker-compose up -d --build
 
 # Run the container bash
-$ docker-compose exec python3 bash
+$ docker-compose exec app bash
 ```
 
 Create an AWS IAM user and two S3 buckets for file input and file output. Then, Set config and env files.
@@ -44,7 +44,7 @@ Create AWS lambda function for transcribing when wav file has uploaded to S3 inp
 Place the mp4 files you want to convert in the input directory. The following command will output a wav file under the audio directory.
 
 ```bash
-$ python converter.py test.mp4 test.wav
+$ poetry run python converter.py test.mp4 test.wav
 ```
 
 ### 2. Upload wav to Amazon S3
@@ -52,7 +52,7 @@ $ python converter.py test.mp4 test.wav
 Create S3 bucket. Then upload the wav file to the Amazon S3 bucket.
 
 ```bash
-$ python uploader.py test.wav
+$ poetry run python uploader.py test.wav
 ```
 
 ### 3. Create AE script
@@ -62,3 +62,11 @@ $ python uploader.py test.wav
 ### 5. Execute AE script
 
 ### 6. Export to mov
+
+## Linter
+
+black
+
+```
+$ poetry run black
+```
