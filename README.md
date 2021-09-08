@@ -63,11 +63,14 @@ $ poetry run python uploader.py test.wav
 
 ### 6. Export to mov
 
-## Linter
+## Development
 
-black
+You can check code format.
 
-```
-$ poetry run black
-$ poetry run flake8
+```bash
+# Lint
+$ make lint
+
+# Format
+$ make format
 ```
