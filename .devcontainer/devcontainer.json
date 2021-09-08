@@ -1,0 +1,13 @@
+{
+  "name": "speech_to_ae_subtitle",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "ms-python.python",
+    "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
