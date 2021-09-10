@@ -11,5 +11,8 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
-  }
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+  },
 }
